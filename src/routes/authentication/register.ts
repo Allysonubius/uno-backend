@@ -18,7 +18,7 @@ export const register = async (req: Request, res: Response) => {
   const { data } = body;
 
   try {
-    const isGuest = !!(data.password && data.email);
+    const isGuest = !(data.password && data.email);
     const user = await prisma.user.create({
       data: {
         username: data.username,
