@@ -20,4 +20,4 @@ const server = http.createServer(app);
 
 SocketServer.init(server);
 
-server.listen(process.env.PORT || 3000);
+server.listen(process.env.PORT);
